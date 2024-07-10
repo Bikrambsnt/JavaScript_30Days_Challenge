@@ -1,3 +1,1 @@
-
-// vegetables.push(fruits);
-//  console.log(vegetables);
+console.log(livingOrg.hasOwnProprty(species));
