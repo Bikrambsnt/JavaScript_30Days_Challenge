@@ -1,1 +1,2 @@
-console.log(livingOrg.hasOwnProprty(species));
+console.log(x);//Failed to print
+// console.log(y);
