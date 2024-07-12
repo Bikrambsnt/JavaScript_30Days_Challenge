@@ -1,1 +1,0 @@
-console.log(typeof user["sym"]);//string
