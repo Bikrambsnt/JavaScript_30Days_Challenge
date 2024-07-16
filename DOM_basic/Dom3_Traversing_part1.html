@@ -18,6 +18,8 @@
         <div class="day">Sunday</div>
 
     </div>
+    </body>
+    
 
     <script>
         const parent =document.querySelector('.parent')
@@ -53,18 +55,90 @@
      //But we can access parent from the child also....
         //Like...
     
-     document.querySelector(".day");
+     document.querySelector(".day");//.day is a class...
     const childToParent = document.querySelector(".day");
 
-        console.log(childToParent.parentElement);
+        console.log(childToParent.parentElement);//It will show the parent element
+
+        console.log(childToParent.nextElementSibling);//Now it will give the the next sibling of that element
 
 
+        //Now this is the most important that is Node List
 
+        //Nodelist is the complex structure that happens behind the browser which is a tree like structure..
+        //this every action that is perform in a code  will be stored in a node list.. evern next line or a full stop
+        //Example
+        
+        console.log(parent.childNodes);//accessing the child node of our parent element..
+
+        //This is what it is look like... 
+
+//         NodeList(15) [text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text]
+// 0
+// : 
+// text
+// 1
+// : 
+// div.day
+// 2
+// : 
+// text
+// 3
+// : 
+// div.day
+// 4
+// : 
+// text
+// 5
+// : 
+// div.day
+// 6
+// : 
+// text
+// 7
+// : 
+// div.day
+// 8
+// : 
+// text
+// 9
+// : 
+// div.day
+// 10
+// : 
+// text
+// 11
+// : 
+// div.day
+// 12
+// : 
+// text
+// 13
+// : 
+// div.day
+// 14
+// : 
+// text
+// length
+// : 
+// 15
+// [[Prototype]]
+// : 
+// NodeList
+
+//And more option will be there...
+
+//Thats all about Dom elements//
+//In this I have completed the traversing from parent to child and child to parent..
+
+//More on next file
+
+//Happy coding
 
 
 
 
     </script>
     
-</body>
+
 </html>
