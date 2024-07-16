@@ -1,0 +1,134 @@
+<!--
+So here I have talked about some done elements in js through which we can easily manupulate the document-->
+
+
+<!--Example-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manupulation</title>
+  <style>
+    body{
+        background-color: black;
+        color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+
+    <div></div>
+
+    <h1  id="top"  class="head">Dom manupulation <span style="display: none;">New added text</span></h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <ul>
+        <li>one</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+<script>
+//Here i have talked about the DOM manupulation techniqies...o
+
+//Selecting Id of a document
+
+document.getElementById("top"); //(This is used to view the id )
+// <h1 id=​"top" class=​"head">​Dom manupulation​</h1>​
+ document.getElementById("top").id // (this is used to get the id name)
+// top
+
+//To get the class name
+
+document.getElementById("top").className //Now this will give me the class of that element
+
+
+//Attributes
+document.getElementById("top").getAttribute('id')
+//'top'
+document.getElementById("top").getAttribute('class')
+//'head'
+//We can set own attribute also using set
+
+document.getElementById("top").setAttribute('class' ,'changedClass'); //This will add a new class name that is changedClass
+
+///While doing setAttribute it will always override the main component
+
+
+
+document.getElementById("top").setAttribute('class' ,'changedClass Another') //This will set 2 name of class
+
+
+
+//Setting style 
+
+document.getElementById("top")
+// <h1 id=​"top" class=​"changedClass Another">​Dom manupulation​</h1>​
+const title = document.getElementById('top')
+
+title
+// <h1 id=​"top" class=​"changedClass Another">​Dom manupulation​</h1>​
+//setting style here
+
+
+title.style.backgroundColor ="blue"
+'blue'
+title.style.padding ="30px"
+'30px'
+
+title.style.borderRadius="20px"
+'20px'
+
+title.style.fontFamily='Poppins' 
+'Poppins'
+
+
+
+//To extract the tect content form the above Html we will use these below metod .. But they have difference
+
+
+title
+// <h1 id=​"top" class=​"changedClass Another" style=​"background-color:​ blue;​ padding:​ 30px;​ border-radius:​ 20px;​ font-family:​ Poppins;​">​Dom manupulation​</h1>​
+
+title.textContent
+'Dom manupulation'
+title.innerHTML
+'Dom manupulation'
+title.innerText
+'Dom manupulation'
+
+//Now these three have difference in between them and works differently... like
+
+//For that i have added span in above with some style on it
+title.textContent
+'Dom manupulation New added text'
+title.innerText
+'Dom manupulation'
+
+// now when I done that the textContent have shown me the whole text even ts hidden and the innerText shown me the text that is actually showng in webpage
+ title.innerHTML
+'Dom manupulation <span style="display: none;">New added text</span>'
+//and innerHtml will give me whole line of code or content...
+
+//This is the main difference in three of them...
+
+//Now Lets learn about querySelector...
+//Query selector will give the value value of the document even if it has a dublicate content..
+
+document.querySelector('h2')
+// <h2>​Lorem ipsum dolor sit.​</h2>​
+document.querySelector('#top')
+// <h1 id=​"top" class=​"changedClass Another" style=​"background-color:​ blue;​ padding:​ 30px;​ border-radius:​ 20px;​ font-family:​ Poppins;​">​…​</h1>​
+document.querySelector('.par')
+// <p class=​"par">​Lorem ipsum dolor sit amet consectetur adipisicing elit.​</p>​
+
+//Through   querySelector we can select any content like id,class,input field etc 
+</script>
+    
+</body>
+
+</html>
