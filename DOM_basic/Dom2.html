@@ -28,9 +28,11 @@ So here I have talked about some done elements in js through which we can easily
     <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
     <ul>
-        <li>one</li>
-        <li>Two</li>
-        <li>Three</li>
+        <li class="item-list">one</li>
+        <li class="item-list">Two</li>
+        <li class="item-list">Three</li> 
+        <li class="item-list">four</li>
+
     </ul>
 <script>
 //Here i have talked about the DOM manupulation techniqies...o
@@ -127,6 +129,98 @@ document.querySelector('.par')
 // <p class=​"par">​Lorem ipsum dolor sit amet consectetur adipisicing elit.​</p>​
 
 //Through   querySelector we can select any content like id,class,input field etc 
+
+//More example
+
+document.querySelector('ul')
+
+document.querySelector('li');
+
+//That will select only the first value...
+
+const myli =document.querySelector('li')
+
+myli.style.backgroundColor="red"
+'red'
+
+myli.style.padding="10px"
+'10px'
+myli.innerText="I have been Changed"
+'I have been Changed'
+
+//Thats the wxample of query selector...
+
+
+//But what if we want to select all value
+//Then we will use querySelector all
+
+//Example
+
+// document.querySelectorAll('li')
+// NodeList(3) [li, li, li]
+// const allLi =document.querySelectorAll('li')
+// allLi
+// NodeList(3) [li, li, li] //This is not a array its a node List
+
+// //So query selector wil give all the elements in the form of Nodelist...//And remeber these node list are different from Array and simply thats not a array.
+
+// //trying to add style 
+// allLi.style.color ="green";
+//It will give me error because I have to tell it index also like array..
+allLi[0].style.color ='green' //This is how we can add something in a node list
+'green'
+
+//We have to pass the index to access that value 
+
+const allLi = document.querySelectorAll('h1');
+
+allLi
+// NodeList [h1#top.changedClass.Another]
+allLi.style.color ='green'
+//This will also throw an error because there is no index
+
+// the correct way is
+
+const allLi = document.querySelectorAll('h1');
+
+allLi
+// NodeList [h1#top.changedClass.Another]
+allLi[0].style.color ='green'
+//This is the correct way
+
+//Now this node list will provide one method of array that is for each loop
+
+//Lets try to use that...
+
+allLi.forEach ( (list) =>  {
+    list.style.backgroundColor ="yellow"
+})
+
+//Now lets Talk about getElementByClass in dom manupulation
+//here this will return the HTML collection , and this is different from array,node list
+//html collection doesnt provide any looping method or other essential properties so to use that we need to convert this first into the array from
+document.getElementsByClassName('item-list')
+// HTMLCollection(4) [li.item-list, li.item-list, li.item-list, li.item-list]0: li.item-list1: li.item-list2: li.item-list3: li.item-listlength: 4[[Prototype]]: HTMLCollection
+const classLi = document.getElementsByClassName('item-list')
+
+undefined
+classLi
+// HTMLCollection(4) [li.item-list, li.item-list, li.item-list, li.item-list]
+//Converting html collection to array form
+
+//using Array.from
+ //classLi
+// HTMLCollection(4) [li.item-list, li.item-list, li.item-list, li.item-list]
+
+Array.from(classLi)
+(4) [li.item-list, li.item-list, li.item-list, li.item-list]
+//Successfully converted into array now I can use any array method on it
+
+const newarr =Array.from(classLi)
+undefined
+newarr.forEach((li) => li.style.color="red")
+
+
 </script>
     
 </body>

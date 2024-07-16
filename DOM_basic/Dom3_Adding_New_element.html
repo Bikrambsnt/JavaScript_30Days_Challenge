@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Element in Dom</title>
+</head>
+<body style="background-color:#000000; color :#ffff;">
+    <!--Now lets Understand the more concept of query selector and how we can add a new element-->
+
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+
+    </div>
+
+    <script>
+        const parent =document.querySelector('.parent')
+        console.log(parent) //simply accessing the parent class
+        //Now here is new property called childern which is used to access the child inside the parent like
+        console.log(parent.children);//it will give me the children indide the parent in a Html collection form
+
+        //Now i can acess the children also through index value
+
+        console.log(parent.children[3]);//answer will be <div class="day">Thursday</div> easy right..
+        console.log(parent.children[3].innerHTML);//now i will get the inner html
+
+        //Now i want to use loop for this i will use for loop 
+
+        for (let i = 0; i <parent.children.length; i++) {
+            parent.children[i].style.color= "orange" //change style..
+            console.log(parent.children[i].innerHTML);
+        
+
+        }
+
+
+     console.log(parent.children[3].style.color="red");
+
+
+     //Some intresting properties
+
+     console.log(parent.firstElementChild);//Finding the first element of parent
+
+     console.log(parent.lastElementChild) //getting last element...
+
+     //Now till here we have seen accessing child from the parent ...
+     //But we can access parent from the child also....
+        //Like...
+    
+     document.querySelector(".day");
+    const childToParent = document.querySelector(".day");
+
+        console.log(childToParent.parentElement);
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
