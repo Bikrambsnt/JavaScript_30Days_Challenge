@@ -39,7 +39,7 @@
 
   //Lets try more to do using function......
   
- const fCall = (text) =>{
+ const fCall = (text ,style ={}) =>{
     const div2 = document.createElement('div');
     console.log(div2);
     div2.className ="main-section";
@@ -51,6 +51,10 @@
     div2.style.backgroundColor ="blue";
     div2.style.borderRadius ="20px"
     div2.style.padding ="30px";
+
+    Object.entries(style).forEach(([key , value]) => {
+        div2.style[key] =value;
+    });
     document.body.appendChild(div2);
     
 
@@ -58,6 +62,15 @@
 
  }
  fCall("This is Inside the Function");
+
+ fCall("Hello World",{
+    margin:"30px",
+    color: "Red",
+    fontFamily:'Poppins'
+ });
+
+ 
+ //Now suppose I want to call same function again then I will do// First I have to create a object for thr style 
 
 
  //And thats how we can add new elements on Dom...
