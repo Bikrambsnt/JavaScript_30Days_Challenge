@@ -38,9 +38,34 @@
   //Thats the concept of adding new element using DOM...
 
   //Lets try more to do using function......
-
   
+ const fCall = (text) =>{
+    const div2 = document.createElement('div');
+    console.log(div2);
+    div2.className ="main-section";
+    div2.title ="title";
+    const text2 =document.createTextNode(text);
+    div2.appendChild(text2);
+    div2.style.color ="orange";
+    div2.style.fontSize ="30px";
+    div2.style.backgroundColor ="blue";
+    div2.style.borderRadius ="20px"
+    div2.style.padding ="30px";
+    document.body.appendChild(div2);
+    
 
+
+
+ }
+ fCall("This is Inside the Function");
+
+
+ //And thats how we can add new elements on Dom...
+
+ //Easy Right?
+ //Happy Coding
+
+ 
 
 </script>
 </html>
