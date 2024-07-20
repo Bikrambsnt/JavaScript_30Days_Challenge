@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Neumorphic Digital Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .clock {
+            background: #e0e0e0;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px #b3b3b3, -5px -5px 15px #ffffff;
+            padding: 50px;
+            text-align: center;
+            width: 300px;
+            transition: box-shadow 0.3s ease;
+            animation: glow 2s alternate infinite ease-in-out;
+        }
+
+
+        .time {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            
+        }
+
+        .date {
+            font-size: 24px;
+            font-weight: 300;
+            color: #666;
+        }
+        @keyframes glow{
+
+           0%{
+            filter: drop-shadow(0 0 2px rgb(255, 0, 0));
+           }
+
+           100%{
+            filter: drop-shadow( 0 0 5px rgb(225, 0, 255));
+           }
+
+        }
+
+     
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .time, .date {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
+    </div>
+
+</body>
+<script src="project3.js"></script>
+</html>
