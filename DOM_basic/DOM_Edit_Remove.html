@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Edit and Remove</title>
+</head>
+<body style="background-color: #000000; color: #fff;">
+
+    <ul class="fruits">
+        <li>Apple</li>
+    </ul>
+
+
+    
+</body>
+
+<script>
+    //Here lets add new element on li through function...
+
+    const addEl = function (newFruit) {
+        const li = document.createElement('li');
+        li.textContent =`${newFruit}` 
+        document.querySelector('.fruits').appendChild(li);
+
+
+
+
+    }
+    addEl("Mango");
+    addEl("Banana");
+
+    //OR there is better option to add this element in a optimize way..
+    
+   const optimize = (addOpti) => {
+    const li =document.createElement('li')
+    li.appendChild(document.createTextNode(addOpti));
+    document.querySelector('.fruits').appendChild(li); //I have access appendChild also in a same line
+
+   }
+   optimize("Papaya")
+
+
+   //Edit //
+   //how can we edit the li elements...
+
+   const edit =document.querySelector('li:nth-child(2)');//here I want to change the li element 2nd value...
+   //On this also I can do..
+//    edit.innerHTML =("Orange")//It will change the value its correct , but its not optimize so better I can do
+
+   const editSecond = document.createElement('li');
+//    editSecond.textContent ='orange';
+//OR
+editSecond.appendChild(document.createTextNode('Kiwi'))//Better option
+   edit.replaceWith(editSecond);
+
+   //Another option to add Element...
+
+   const edit2 =document.querySelector('li:nth-child(3)');
+   edit2.outerHTML ='<li>Changed to Cherry </li>'; 
+
+   //Remove Element..
+
+const remEl =document.querySelector('li:nth-child(3)');
+remEl.remove();
+
+//OR we can simply do 
+
+// document.querySelector('li:nth-child(3)').remove()
+   
+//Thats it for Dom ....
+
+//Next one will be Project..
+
+// Happy Coding...
+
+
+
+
+</script>
+</html>
