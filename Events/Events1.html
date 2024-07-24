@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+<style>
+    body {
+        background-color: #000000a8;
+        color: #ffffff;
+        margin: 0;
+        font-family: 'Antonio', sans-serif;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 20px;
+        padding: 20px;
+       border: 10px solid rgb(115, 0, 255);
+       border-radius: 10px;
+        /* flex-wrap: wrap; */
+    }
+
+    .card {
+        width: 200px;
+        height: 20vh;
+        padding: 30px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:nth-child(1) {
+        background-color: #e74c3c;
+    }
+
+    .card:nth-child(2) {
+        background-color: #3498db;
+    }
+
+    .card:nth-child(3) {
+        background-color: #f1c40f;
+    }
+
+    .card:nth-child(4) {
+        background-color: #2ecc71;
+    }
+    a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+</style>
+</head>
+<body>
+
+    <div id ="main" class="main">
+        <div id="card1" class="card">Card1</div>
+        <div id="card2" class="card">Card2</div>
+        <div id="card3" class="card">Card3</div>
+       <div  id="card4" class="card"><a href="https://www.google.com">Card4</a></div>
+    </div>
+
+</body>
+<script src="Event1.js"></script>
+</html>
