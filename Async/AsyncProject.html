@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d6d6d6;
+    transition: background-color 1s;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.change-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+.change-container:hover {
+    transform: scale(1.1);
+}
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+button#btn1 {
+    background-color: #129e00;
+    color: white;
+}
+
+button#btn2 {
+    background-color: #ff1100;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.message {
+    font-size: 16px;
+    color: #333;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Auto Changing Background Color</h1>
+        </div>
+        <div class="change-container">
+            <div class="buttons">
+                <button id="btn1">Start</button>
+                <button id="btn2">Stop</button>
+            </div>
+            <div class="message" id="message">Press Start to start.</div>
+        </div>
+    </div>
+
+    <script src="asyncProject.js"></script>
+</body>
+</html>
