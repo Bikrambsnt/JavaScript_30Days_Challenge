@@ -78,6 +78,7 @@ get.open('GET' , url)
  get.onreadystatechange = function (){
      console.log(get.readyState);
 
+     if(xhr.readyState===4){
     //  console.log(this.responseText);
     const hold = JSON.parse(this.responseText);
 
@@ -89,7 +90,7 @@ get.open('GET' , url)
 
     
     }
- 
+}
 
 
 get.send();

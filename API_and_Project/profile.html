@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git API</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #858585;
+            font-family: 'Antonio', sans-serif;
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        #card {
+            width: 300px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #fff;
+            text-align: center;
+            font-family:'Poppins' , sans-serif;
+        }
+
+        .profilePic {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: #fbfbfb;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            color: #000000;
+            
+        }
+        .profilePic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+           
+        }
+        #followers {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            cursor: pointer;
+          
+        }
+
+        #name{
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+
+        }
+       
+        #error{
+            color: red;
+            margin: 10px;
+        }
+
+       
+    </style>
+</head>
+<body>
+  
+    <div id="main">
+        <div id="card">
+            <div id="profile" class="profilePic">
+                <img id="image" src="" alt="profile Pic">
+             
+            </div>
+            <div id="followers">Followers 
+                <span id="follow"></span>
+            </div>
+
+            <div id="name">Name</div>
+            <div id="error"></div>
+        </div>
+    </div>
+</body>
+
+<script src="profileApi.js"></script>
+</html>

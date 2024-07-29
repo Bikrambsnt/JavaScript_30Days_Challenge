@@ -24,7 +24,7 @@
 const array1 = ["Apple" ,"Banana" ,"Guava" ,"Oragne"]
 
 array1.forEach( (value ,key ,aray) => {
-
+x
     console.log(value,key,aray);//This is how we can get that...
 
 })
