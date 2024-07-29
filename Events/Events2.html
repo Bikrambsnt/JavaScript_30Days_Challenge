@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #main{
+        height: 100vh;
+        background-color: #000000;
+        color: #ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cursor{
+        width: 25px;
+        height: 25px;
+        background-color: #ffdb0e;
+        border-radius: 50%;
+        mix-blend-mode: difference; /*its useď to make a diffrence in cursor and a text*/
+        position: absolute;
+        transition: all linear 0.2s; /*For smooth hovering*/
+    }
+
+    h1{
+        font-size: 60px;
+        font-weight: 600;
+        font-family: 'Antonio' ,sans-serif;
+
+    }
+
+
+</style>
+
+</head>
+<body>
+
+    <div id="main">
+        <div class="cursor"></div>
+       <h1>Move cursor</h1>
+       
+    </div>
+    
+</body>
+
+<script src="events2.js"></script>
+</html>

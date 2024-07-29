@@ -19,16 +19,36 @@ let playGame =true; //This will allow user to play game of the user is elegible.
 
 //Here I will write the user to check if the user can play or not...
 
+
+//Multiple event Listener
+ submit.addEventListener('click' ,(e) =>{
+    e.preventDefault();
+    submitGame();
+    // console.log('clicked')
+ });
+
+
+ userInput.addEventListener('keydown' ,(e) =>{
+    if(e.key === 'Enter'){
+
+        submitGame();
+
+    }
+ })
+
+
+function submitGame() { //to fire click and enter button ....
+
 if(playGame){
-    submit.addEventListener('click' ,(e) =>{
-        e.preventDefault(); //Preventing default submission of the form in server
+    // submit.addEventListener('click' ,(e) =>{
+        // e.preventDefault(); //Preventing default submission of the form in server
 
         const guess = parseInt(userInput.value);//This is to take the given value by user
         // console.log(guess);
         validateGuess(guess); //and if the user is elegible to play then  it will pass to validGuess function
 
 
-    })
+    // })
 
 }
 //Now lets create some function to perform some operation...
@@ -47,6 +67,7 @@ else if(guess >50){
 }
 else{  //From here if the number is valid then
     previousGuess.push(guess); // start Pushing entered number in the above  previous guess empty array
+    error.innerHTML =''; //clear the error message if enter correct value
 
     if(numGuess >= 10){ //And if its the last number that means 10 then
         displayGuess(guess) //display guess
@@ -132,7 +153,7 @@ function SatrtNewGame() {
      })
 
 }
-
+}
 
 //And thats it for Project...
 //Easy and simple..
