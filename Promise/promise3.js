@@ -92,6 +92,7 @@ const myPromise = new Promise((resolve ,reject) =>{
 
 ///
 
+
  fetch('https://jsonplaceholder.typicode.com/users')
  .then((response)=>{
         return response.json();
