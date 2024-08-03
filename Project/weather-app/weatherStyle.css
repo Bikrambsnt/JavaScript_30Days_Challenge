@@ -29,7 +29,7 @@ body {
     justify-content: flex-start; 
     align-items: center; 
     width: 500px;
-    height: 550px;
+    height: 570px;
     border-radius: 20px;
     background: rgba( 255, 255, 255, 0.1 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -88,6 +88,7 @@ body {
     width: 400px;
     height: 400px;
     margin: 20px;
+    color: #000000;
     border-radius: 43px;
     background: linear-gradient(145deg, #9a9a9a, #b7b7b7);
     box-shadow:  13px 13px 100px #a1a1a1,
@@ -96,4 +97,25 @@ body {
 
 #error{
     color: #d02d0c;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+#data {
+    padding: 30px;
+    background-color: #d02d0c;
+    margin-top: 200px;
+}
+
+/* respnsive */
+
+@media (max-width:500px){
+    body{
+        padding: 10px;
+    }
+
+    #card{
+        width: 400px;
+        height: 400px;
+    }
+
 }
