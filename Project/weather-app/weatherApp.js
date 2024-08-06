@@ -42,7 +42,7 @@ const getWeather = async  (city)=>{
 
 const api_Key = '9525b7d9f20542659ef135449240904';
 
-const api_Url =`http://api.weatherapi.com/v1/current.json?key=${api_Key}&q=${city}&aqi=no`//Api url 
+const api_Url =`https://api.weatherapi.com/v1/current.json?key=${api_Key}&q=${city}&aqi=no`//Api url 
 
 
     try {
