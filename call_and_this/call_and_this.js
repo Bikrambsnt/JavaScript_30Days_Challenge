@@ -54,3 +54,9 @@
 
     const dataDisplay = new getUser("Ram" ,"Example@gmail.com",10)
     console.log(dataDisplay)
+
+
+
+    //Thats It all about Call and This 
+    //Happy Coding
+    
