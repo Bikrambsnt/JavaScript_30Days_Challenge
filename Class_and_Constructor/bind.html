@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    
+    <button>Click me</button>
+</body>
+
+<script>
+  //All about bind and how it works
+
+    class user {
+        constructor(){
+            //here am passing a hard code value which means am directly giving value to variable
+
+            this.name="Bikram"      
+            this.address = "Gangtok"
+        
+
+        //Now if I want to get the value of this class when I click button then i will do
+            document.querySelector('button')
+                .addEventListener('click' , this.userDetail.bind(this)) // here passing this inside bind because to take the refrence of all this
+                
+        }
+
+        //now it should display me the userDetails value 
+
+        //But now when I click the button the first value  is display in the output 
+        //but the second value that is address will be undefined
+
+        // now to get the refrence of this also in the method we will use bind
+        //Bind will take the refrence of the constructor value also it will bind all the things 
+    
+        //After that it will take the refrence of all this ....
+        userDetail (){
+
+            console.log("Button Clicked");
+            console.log(`${this.address}`)
+
+        }
+
+    }
+
+    const display = new user();
+
+
+
+
+</script>
+</html>
+
