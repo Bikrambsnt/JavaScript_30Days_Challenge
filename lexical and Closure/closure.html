@@ -1,0 +1,65 @@
+
+
+<!-- Here Lets Undersatnd Closure with an Example -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <button id="blue"style="padding: 20px; margin: 10px; "> Blue</button>
+    <button id = 'red' style="padding: 20px;"> red</button>
+</div>
+</body>
+
+
+<script>
+ //The thing is that we meed to change the color of background according to button easy right..
+
+ //without closure we can do
+
+        // document.getElementById('blue').onclick = function(){
+        //     document.body.style.backgroundColor = 'blue';
+
+
+        // }
+
+        // document.getElementById('red').onclick = function (){
+        //     document.body.style.backgroundColor = 'red';
+        // }
+
+        ///But with this concept if there is large number of coloe and buttons then i cannt do that above logic...
+
+        //So for that I will use closure...
+
+
+        function changeBg(color){
+
+            // document.body.style.backgroundColor = `${color}`;
+            // It wont work
+
+            // here we will need to wrte the function which can return the color everytime I click on any button
+
+            return function(){
+                document.body.style.backgroundColor = color;
+            }
+}
+
+//Now I will call this function everythime the button clicked
+        
+            document.getElementById('blue').onclick = changeBg('blue');
+
+            document.getElementById('red').onclick= changeBg('red');
+        
+
+            //So due to lexical scope the color has been accessed to another function aslo and while returning the function it will return child and parent both to the global context so we can able to access it outside
+
+
+</script>
+</html>
